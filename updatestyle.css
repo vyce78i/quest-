@@ -1,0 +1,468 @@
+/* retro pixel color palette and theme variables */
+:root {
+  --bg-dark: #12071a;
+  --panel-bg: #1c0d29;
+  --panel-border: #3b1c54;
+  --lilac: #c084fc;
+  --lilac-muted: #8b5cf6;
+  --pink: #ff388e;
+  --pink-glow: 0 0 10px rgba(255, 56, 142, 0.45);
+  --white: #ffffff;
+  --text-muted: #a78bfa;
+  --black: #08030c;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body { /* base font scaling */
+  background: var(--bg-dark);
+  color: var(--white);
+  font-family: 'Press Start 2P', monospace, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 24px 12px;
+   font-size: 20px;
+  line-height: 1.6;
+}
+
+/* top bar title */
+.brand-title {
+  font-size: 20px;
+}
+
+/* username and level */
+.player-username,
+.log-title {
+  font-size: 18px;
+}
+
+#level-label,
+.level-tag {
+  font-size: 14px;
+}
+
+.logout-link,
+.exit-btn {
+  font-size: 14px;
+  padding: 6px 10px;
+}
+
+/* xp meta text */
+.progress-header,
+.xp-meta {
+  font-size: 14px;
+}
+
+.bracket-bar {
+  font-size: 13px;
+}
+
+/* quest input and submit button */
+.quest-input-field,
+.quest-input {
+  font-size: 14px;
+  padding: 14px 12px;
+}
+
+.quest-submit-btn,
+.quest-btn {
+  font-size: 14px;
+  padding: 0 16px;
+}
+
+/* section headers */
+.section-label {
+  font-size: 14px;
+}
+
+/* quest list item cards */
+.quest-title-text,
+.quest-name {
+  font-size: 14px;
+}
+
+.quest-meta-text {
+  font-size: 12px;
+}
+
+.btn-complete,
+.btn-delete,
+.action-btn,
+.del-btn {
+  font-size: 12px;
+  padding: 8px 12px;
+}
+
+/* modal step text */
+.step-label,
+.picker-title {
+  font-size: 16px;
+}
+
+.dashed-select-box {
+  font-size: 16px;
+  padding: 16px;
+}
+
+.btn-pick,
+.pick-btn {
+  font-size: 16px;
+  padding: 12px 28px;
+}
+/* app container */
+.app-container {
+  width: 100%;
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* retro pixel border cards */
+.pixel-card {
+  background: var(--panel-bg);
+  border: 4px solid var(--panel-border);
+  box-shadow: 4px 4px 0 var(--black);
+  padding: 16px;
+}
+
+/* dashboard top header profile row */
+.profile-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.hero-identity {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* circle hero portrait frame */
+.avatar-circle-frame {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 3px solid var(--pink);
+  box-shadow: var(--pink-glow), 3px 3px 0 var(--black);
+  background: #250f38;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.avatar-circle-frame img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  image-rendering: pixelated;
+}
+
+.player-username {
+  font-size: 11px;
+  color: var(--white);
+  text-transform: lowercase;
+  letter-spacing: 0.5px;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.level-tag {
+  background: var(--lilac);
+  color: var(--black);
+  font-size: 8px;
+  padding: 4px 6px;
+  font-weight: bold;
+}
+
+.exit-btn {
+  background: transparent;
+  border: 2px solid var(--panel-border);
+  color: var(--text-muted);
+  font-family: inherit;
+  font-size: 8px;
+  padding: 4px 6px;
+  cursor: pointer;
+}
+
+.exit-btn:hover {
+  border-color: var(--pink);
+  color: var(--pink);
+}
+
+/* xp tracker */
+.xp-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 8px;
+  color: var(--lilac);
+  margin-bottom: 6px;
+}
+
+.xp-track {
+  height: 12px;
+  background: var(--black);
+  border: 2px solid var(--panel-border);
+  overflow: hidden;
+}
+
+.xp-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--lilac), var(--pink));
+  transition: width 0.3s ease;
+}
+
+/* add quest form */
+.quest-form {
+  display: flex;
+  gap: 8px;
+}
+
+.quest-input {
+  flex: 1;
+  background: var(--black);
+  border: 2px solid var(--panel-border);
+  color: var(--white);
+  padding: 12px 10px;
+  font-family: inherit;
+  font-size: 9px;
+  outline: none;
+}
+
+.quest-input:focus {
+  border-color: var(--lilac);
+}
+
+.quest-btn {
+  background: var(--pink);
+  border: 2px solid var(--black);
+  color: var(--white);
+  font-family: inherit;
+  font-size: 9px;
+  padding: 0 14px;
+  cursor: pointer;
+  box-shadow: 2px 2px 0 var(--black);
+}
+
+.quest-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: none;
+}
+
+/* quest feed items */
+.quest-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.quest-row {
+  background: var(--panel-bg);
+  border: 3px solid var(--panel-border);
+  box-shadow: 3px 3px 0 var(--black);
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.quest-row.done {
+  opacity: 0.55;
+  border-color: #2e1642;
+}
+
+.quest-name {
+  font-size: 9px;
+  color: var(--white);
+  line-height: 1.4;
+}
+
+.action-btn {
+  background: var(--lilac);
+  border: 2px solid var(--black);
+  color: var(--black);
+  font-family: inherit;
+  font-size: 8px;
+  padding: 6px 8px;
+  cursor: pointer;
+}
+
+.del-btn {
+  background: transparent;
+  border: 2px solid var(--panel-border);
+  color: var(--pink);
+  font-family: inherit;
+  font-size: 8px;
+  padding: 6px 8px;
+  cursor: pointer;
+  margin-left: 6px;
+}
+
+/* avatar picker modal overlay */
+.picker-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 4, 13, 0.94);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  padding: 16px;
+}
+
+.picker-box {
+  background: var(--panel-bg);
+  border: 4px solid var(--lilac);
+  box-shadow: 6px 6px 0 var(--black), var(--pink-glow);
+  width: 100%;
+  max-width: 440px;
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  text-align: center;
+}
+
+.picker-title {
+  font-size: 11px;
+  color: var(--lilac);
+  letter-spacing: 0.5px;
+}
+
+/* step 1 gender selection styled like sketch dashed boxes */
+.gender-step {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+}
+
+.pixel-dashed-btn {
+  background: transparent;
+  border: 3px dashed var(--lilac);
+  color: var(--white);
+  font-family: inherit;
+  font-size: 12px;
+  padding: 16px 0;
+  cursor: pointer;
+  text-transform: lowercase;
+  box-shadow: 3px 3px 0 var(--black);
+}
+
+.pixel-dashed-btn:hover {
+  background: rgba(192, 132, 252, 0.1);
+  border-color: var(--pink);
+  color: var(--pink);
+}
+
+/* step 2 carousel */
+.carousel-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.carousel-viewport {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+}
+
+/* arrow buttons with circle styling */
+.nav-arrow-btn {
+  background: var(--panel-bg);
+  border: 3px solid var(--lilac);
+  color: var(--white);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  font-family: inherit;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 2px 0 var(--black);
+}
+
+.nav-arrow-btn:hover {
+  border-color: var(--pink);
+  color: var(--pink);
+}
+
+/* side cards: shadowy, smaller, dimmed */
+.avatar-preview-card.shadowy {
+  width: 60px;
+  height: 60px;
+  opacity: 0.28;
+  filter: grayscale(40%) brightness(0.5);
+  transform: scale(0.85);
+  border: 2px dashed #4b236e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar-preview-card.shadowy img {
+  width: 44px;
+  height: 44px;
+  image-rendering: pixelated;
+}
+
+/* center card: active, glowing, highlighted */
+.avatar-preview-card.active {
+  width: 88px;
+  height: 88px;
+  border: 3px solid var(--pink);
+  box-shadow: var(--pink-glow), 4px 4px 0 var(--black);
+  background: #250f38;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar-preview-card.active img {
+  width: 68px;
+  height: 68px;
+  image-rendering: pixelated;
+}
+
+/* pick button */
+.pick-btn {
+  background: var(--lilac);
+  border: 3px solid var(--black);
+  color: var(--black);
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 10px 24px;
+  cursor: pointer;
+  box-shadow: 3px 3px 0 var(--black);
+}
+
+.pick-btn.picked {
+  background: var(--pink);
+  color: var(--white);
+  box-shadow: var(--pink-glow), 3px 3px 0 var(--black);
+}
